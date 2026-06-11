@@ -218,6 +218,15 @@ body{background:var(--cream);color:var(--text-dark);font-family:var(--font-displ
 .evt-dress{font-family:var(--font-ui);font-size:.58rem;letter-spacing:.18em;color:var(--maroon);text-transform:uppercase;background:var(--gold-pale);padding:.4rem 1rem;border-radius:50px;border:1px solid var(--gold-light)}
 .evt-time{font-family:var(--font-ui);font-size:.6rem;letter-spacing:.18em;color:var(--text-light);text-transform:uppercase;margin:1px 0}
 .evt-addr{font-family:var(--font-display);font-size:.95rem;color:var(--maroon-dark);line-height:1.55}
+.evt-venue-box{width:100%;max-width:360px;margin-top:.65rem;background:var(--cream);border:1px solid var(--border);border-radius:1rem;padding:1.1rem 1.15rem;text-align:center}
+.evt-card.maroon .evt-venue-box{background:rgba(255,255,255,.72);border-color:var(--maroon-border)}
+.evt-venue-label{font-family:var(--font-ui);font-size:.52rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.45rem}
+.evt-venue-name{font-family:var(--font-display);font-size:1rem;color:var(--maroon-dark);display:block;line-height:1.35;margin-bottom:.15rem}
+.evt-venue-addr{font-family:var(--font-display);font-style:italic;font-size:.86rem;color:var(--text-mid);line-height:1.5;display:block;margin-bottom:.75rem}
+.evt-venue-btns{display:flex;flex-direction:column;gap:.45rem;align-items:center}
+.evt-map-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--maroon-dark);color:#fff;text-decoration:none;padding:.5rem 1.15rem;border-radius:9999px;font-family:var(--font-ui);font-size:.52rem;letter-spacing:.16em;text-transform:uppercase;transition:all .25s;width:100%;max-width:240px}
+.evt-map-btn:hover{background:var(--maroon-deep);transform:translateY(-2px);box-shadow:0 4px 14px rgba(90,13,26,.3)}
+.evt-map-btn svg{width:12px;height:12px;flex-shrink:0}
 .evt-video{border-radius:1.4rem;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:#111;max-height:240px;transition:max-height 1.4s cubic-bezier(.25,1,.5,1)}
 .evt-video.open{max-height:900px}
 .evt-video video{width:100%;height:auto;display:block;background:#000}
@@ -396,7 +405,7 @@ body{background:var(--cream);color:var(--text-dark);font-family:var(--font-displ
       <span style="font-family:var(--font-display);font-size:1.35rem;color:var(--maroon-dark);display:block;margin-bottom:.2rem;letter-spacing:.04em">Poplar Meadows</span>
       <span style="font-family:var(--font-display);font-style:italic;font-size:.95rem;color:var(--text-mid)">5575 34b Ave, Delta</span>
       <div style="margin-top:.875rem">
-        <a class="dir-btn" href="https://maps.google.com/?q=Poplar+Meadows+5575+34b+Ave+Delta+BC" target="_blank" rel="noopener">
+        <a class="dir-btn" href="https://share.google/nBDqnjdl7hfX1YtRr" target="_blank" rel="noopener">
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           Navigate to Venue
         </a>
@@ -442,7 +451,17 @@ body{background:var(--cream);color:var(--text-dark);font-family:var(--font-displ
           <div class="evt-divider"></div>
           <span class="evt-dress">👗 Indian Traditional Attire</span>
           <span class="evt-time">Date & Time — TBA</span>
-          <span class="evt-addr">Poplar Meadows · 5575 34b Ave, Delta</span>
+          <div class="evt-venue-box">
+            <span class="evt-venue-label">Venue</span>
+            <span class="evt-venue-name">Poplar Meadows</span>
+            <span class="evt-venue-addr">5575 34b Ave, Delta</span>
+            <div class="evt-venue-btns">
+              <a class="evt-map-btn" href="https://share.google/nBDqnjdl7hfX1YtRr" target="_blank" rel="noopener">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                Open in Maps
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="evt-video" id="ev4"><video muted loop playsinline preload="none" data-seq data-autoplay><source data-src="https://pub-1953a6673e864f3488c645252f75de98.r2.dev/June/Ajay%20%26%20Himani%20-%20Gunveen/249.mp4" type="video/mp4"></video></div>
@@ -459,7 +478,18 @@ body{background:var(--cream);color:var(--text-dark);font-family:var(--font-displ
           <p class="evt-tagline">Raise a toast to love, laughter, and new beginnings as we celebrate together into the night.</p>
           <div class="evt-divider"></div>
           <span class="evt-dress">👗 Formal Traditional · Black Tie</span>
-          <span class="evt-time">Date & Time · Venue — TBA</span>
+          <span class="evt-time">Date & Time — TBA</span>
+          <div class="evt-venue-box">
+            <span class="evt-venue-label">Venue</span>
+            <span class="evt-venue-name">Reflections Banquet Hall</span>
+            <span class="evt-venue-addr">Surrey, BC</span>
+            <div class="evt-venue-btns">
+              <a class="evt-map-btn" href="https://share.google/VUtGZhplrhJPycxZE" target="_blank" rel="noopener">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                Open in Maps
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="evt-video" id="ev5"><video muted loop playsinline preload="none" data-seq data-autoplay><source data-src="https://pub-1953a6673e864f3488c645252f75de98.r2.dev/June/Ajay%20%26%20Himani%20-%20Gunveen/250.mp4" type="video/mp4"></video></div>
